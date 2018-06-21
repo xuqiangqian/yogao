@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yogo.fm.mapper.system.IFileMapper">
+    <resultMap id="fileMap" type="com.yogo.fm.model.system.FileEntity">
+
+    </resultMap>
+
+    <insert id="save">
+        insert into fm_file (
+        url,originName,name,type,suffix,createTime
+        ) value (
+        #{url},#{originName},#{name},#{type},#{suffix},now()
+        )
+    </insert>
+</mapper>

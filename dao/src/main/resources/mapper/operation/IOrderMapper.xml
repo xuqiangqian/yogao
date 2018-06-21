@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yogo.fm.mapper.operation.content.IOrderMapper">
+    <select id="getOrders" parameterType="com.yogo.fm.model.operation.content.OrderEntity" resultType="com.yogo.fm.model.operation.content.OrderEntity">
+        SELECT * FROM fm_order WHERE
+        <if test="oe.userId != null">
+            userId = #{oe.userId}
+        </if>
+    </select>
+</mapper>

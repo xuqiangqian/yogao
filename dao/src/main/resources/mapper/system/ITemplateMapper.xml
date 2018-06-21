@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yogo.fm.mapper.system.ITemplateMapper">
+    <resultMap id="templateMap" type="com.yogo.fm.model.system.TemplateEntity">
+    </resultMap>
+    <insert id="save">
+    insert  into fm_template (tableName,name,level,createTime,createUser,modifyTime,modifyUser)
+    value
+    (#{tableName},#{name},#{level},#{createTime},#{createUser},#{modifyTime},#{modifyUser})
+    </insert>
+
+    <update id="delete">
+
+    </update>
+    <update id="batchDelete">
+        update fm_template set remove = true where id in
+        <foreach collection="list" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </update>
+    <update id="update">
+        update fm_template set
+        <trim suffixOverrides=",">
+            <if test="tableName != null and tableName != '' ">
+                tableName = #{tableName},
+            </if>
+            <if test="name != null and name != '' ">
+                name = #{name},
+            </if>
+            <if test="level != null ">
+                level = #{level},
+            </if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <select id="batchSave">
+
+    </select>
+    <select id="findAll" resultMap="templateMap">
+    select * from fm_template where  flag=1 and remove = 0
+    </select>
+    <select id="findNameById" resultType="java.lang.String">
+    select te.name from fm_template te where te.id=#{id} and  flag=1 and remove = 0
+    </select>
+</mapper>

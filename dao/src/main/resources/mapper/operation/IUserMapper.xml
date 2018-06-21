@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yogo.fm.mapper.operation.content.IUserMapper">
+
+    <select id="findById" parameterType="Long" resultType="com.yogo.fm.model.operation.content.UserEntity">
+        SELECT * FROM fm_user WHERE id = #{id} AND remove = 0;
+    </select>
+
+    <select id="findUserInfoById" parameterType="Long" resultType="com.yogo.fm.model.operation.content.Userinfo">
+        SELECT * FROM fm_user_info WHERE id = #{id}
+    </select>
+
+    <select id="getAllUsers" resultType="com.yogo.fm.model.operation.content.UserEntity">
+        SELECT * FROM fm_user
+        WHERE remove = 0
+        <if test="ue.startTime != null and ue.endTime != null">
+            AND createTime BETWEEN #{ue.startTime} and #{ue.endTime}
+        </if>
+        <if test="ue.nickname != null and ue.nickname != '' ">
+            AND nickname LIKE "%"#{ue.nickname}"%"
+        </if>
+        <if test="ue.mobileNum != null and ue.mobileNum != ''">
+            AND mobileNum LIKE "%"#{ue.mobileNum}"%"
+        </if>
+    </select>
+    
+    <update id="deleteUser" parameterType="Long">
+        UPDATE fm_user SET remove = 1 WHERE id = #{id};
+        UPDATE fm_user_info SET remove = 1 WHERE id IN (SELECT userInfoId FROM fm_user WHERE id = #{id});
+    </update>
+
+    <update id="changeUserStatus" parameterType="com.yogo.fm.model.operation.content.UserEntity">
+        UPDATE fm_user SET flag = #{ue.flag} WHERE id = #{ue.id};
+        UPDATE fm_user_info SET flag = #{ue.flag} WHERE id IN (SELECT userInfoId FROM fm_user WHERE id = #{id});
+    </update>
+</mapper>

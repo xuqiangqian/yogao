@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: dev
+server:
+  context-path: /admin
+mybatis:
+  mapper-locations: classpath*:mapper/**/*.xml
+  type-aliases-package: com.yogo.fm.model

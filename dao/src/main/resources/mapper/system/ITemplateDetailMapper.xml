@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yogo.fm.mapper.system.ITemplateDetailMapper">
+    <resultMap id="templateDetailMap" type="com.yogo.fm.model.system.TemplateDetailEntity">
+    </resultMap>
+    <insert id="save">
+    insert into fm_templateDetail (tName,tId,rule,description,isActive,isWrite,sort,field,fieldName,dataList,createTime,createUser,modifyTime,modifyUser)
+    value
+    (#{tName},#{tId},#{rule},#{description},#{isActive},#{isWrite},#{sort},#{field},#{fieldName},#{dataList},#{createTime},#{createUser},#{modifyTime},#{modifyUser})
+    </insert>
+
+
+    <update id="delete">
+
+    </update>
+    <update id="batchDelete">
+        update fm_templateDetail set remove = true where id in
+        <foreach collection="list" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+
+    </update>
+    <update id="update">
+        update fm_templateDetail set
+        <trim suffixOverrides=",">
+            <if test="rule != null and rule != '' ">
+                rule = #{rule},
+            </if>
+            <if test="description != null and description != '' ">
+                description = #{description},
+            </if>
+            <if test="isWrite != null ">
+                isWrite = #{isWrite},
+            </if>
+            <if test="isActive != null ">
+                isActive = #{isActive},
+            </if>
+            <if test="sort != null ">
+                sort = #{sort},
+            </if>
+            <if test="field != null and field != '' ">
+                field = #{field},
+            </if>
+            <if test="fieldName != null and fieldName != '' ">
+                fieldName = #{fieldName},
+            </if>
+            <if test="dataList != null and dataList != '' ">
+                dataList = #{dataList},
+            </if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <select id="batchSave">
+
+    </select>
+    <select id="findAll" resultMap="templateDetailMap">
+    select * from fm_templateDetail where 1=1
+        <if test="tId != null ">
+          and  tId = #{tId}
+        </if>
+     and  flag=1 and remove = 0
+    </select>
+    <select id="findAllByTId" resultMap="templateDetailMap">
+    select * from fm_templateDetail where 1=1
+        <if test="tId != null ">
+          and  tId = #{tId}
+        </if>
+     and  flag=1 and remove = 0
+    </select>
+    <select id="findTemplateDetailById" resultMap="templateDetailMap">
+    select  tt.* from fm_templateDetail tt  LEFT  JOIN fm_template td on tt.tId=td.id
+    where td.id=#{id} and tt.remove = false and tt.flag= true
+    </select>
+</mapper>

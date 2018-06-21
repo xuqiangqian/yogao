@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yogo.fm.mapper.system.IResourceMapper">
+    <resultMap id="resourceMap" type="com.yogo.fm.model.system.ResourceEntity">
+    </resultMap>
+    <insert id="save">
+
+    </insert>
+    <delete id="delete">
+
+    </delete>
+    <update id="update">
+
+    </update>
+    <update id="batchDelete">
+        update fm_resource set remove = true where id in
+        <foreach collection="list" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </update>
+    <select id="find">
+
+    </select>
+    <select id="batchSave">
+
+    </select>
+    <select id="findAllPageResource" resultMap="resourceMap">
+      select re.* from fm_resource re where  re.type != 0 and re.remove = false
+    </select>
+    <select id="findResourceByRole" resultMap="resourceMap">
+        select rs.* from fm_resource rs
+         LEFT JOIN  fm_role_resource rr on rs.id =rr.resourceId
+         LEFT JOIN fm_role ro on ro.id=rr.roleId
+        where rs.type = 1 and ro.id =#{roleId}
+    </select>
+    <select id="findByType" resultMap="resourceMap">
+      select re.* from fm_resource re where  re.type = #{type} and re.remove = false
+    </select>
+    <select id="findAll" resultMap="resourceMap">
+      select re.* from fm_resource re where  re.remove = false
+    </select>
+    <select id="findSubmenu" resultType="java.lang.Long">
+      SELECT id FROM fm_resource WHERE parentId in
+        <foreach collection="list" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+        UNION
+      SELECT id FROM fm_resource WHERE parentId in (SELECT id FROM fm_resource WHERE parentId in
+        <foreach collection="list" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+        )
+    </select>
+    <select id="findParentId" resultType="java.lang.Long">
+        SELECT parentId FROM fm_resource WHERE id IN
+        <foreach collection="list" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+        UNION
+        SELECT parentId FROM fm_resource WHERE id IN (SELECT parentId FROM fm_resource WHERE id IN
+        <foreach collection="list" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+        )
+    </select>
+    <select id="findResourceByRoleId" resultMap="resourceMap">
+        select re.* from  fm_resource re left join fm_role_resource rr on re.id = rr.resourceId
+        where rr.roleId = #{roleId} and re.remove = false
+    </select>
+    <select id="findByParentId" resultMap="resourceMap">
+        select * from  fm_resource where parentId = #{parentId} and remove = false and flag = true
+    </select>
+</mapper>

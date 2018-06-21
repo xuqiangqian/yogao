@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yogo.fm.mapper.operation.content.IMessageMapper">
+    <resultMap id="messageMap" type="com.yogo.fm.model.operation.content.MessageEntity">
+
+    </resultMap>
+    <insert id="save">
+        insert into fm_message (
+          title,receiveNumber,type,typeCode,sendTime,status,
+          sendUser,content
+        ) value (
+        #{title},#{receiveNumber},#{type},#{typeCode},#{sendTime},#{status},
+        #{sendUser},#{content}
+        )
+    </insert>
+    <update id="delete">
+      update fm_message set remove = true where id = #{id}
+    </update>
+    <update id="update">
+        update fm_message set
+        <trim suffixOverrides=",">
+            <if test="title != null and title != '' ">
+                title = #{title},
+            </if>
+            <if test="receiveNumber != null and receiveNumber != '' ">
+                receiveNumber = #{receiveNumber},
+            </if>
+            <if test="type != null and type != '' ">
+                type = #{type},
+            </if>
+            <if test="typeCode != null and typeCode != '' ">
+                typeCode = #{typeCode},
+            </if>
+            <if test="sendTime != null">
+                sendTime = #{sendTime},
+            </if>
+            <if test="status != null and status != '' ">
+                status = #{status},
+            </if>
+            <if test="sendUser != null and sendUser != '' ">
+                sendUser = #{sendUser},
+            </if>
+            <if test="content != null and content != '' ">
+                content = #{content},
+            </if>
+        </trim>
+        where id = #{id}
+    </update>
+    <select id="find" resultType="com.yogo.fm.model.operation.content.MessageEntity">
+      select * from fm_message where id = #{id}
+    </select>
+    <select id="batchSave">
+
+    </select>
+    <update id="batchDelete">
+        update fm_message set remove = true where id in
+        <foreach collection="list" item="id" separator="," open="(" close=")">
+           #{id}
+        </foreach>
+    </update>
+
+    <select id="findAllByCondition" resultMap="messageMap">
+        select * from fm_message where 1=1
+        <if test="title != null and title != '' ">
+            and title like concat("%",#{title},"%")
+        </if>
+        <if test="typeCode != null ">
+            and typeCode  = #{typeCode}
+        </if>
+        <if test="status != null and status != '' ">
+            and  status = #{status}
+        </if>
+        <if test="sendUser != null and sendUser != '' ">
+            and  sendUser like concat("%",#{sendUser},"%")
+        </if>
+        <if test="startTime != null and endTime != null ">
+            and  sendTime BETWEEN #{startTime} and #{endTime}
+        </if>
+        and remove = false
+    </select>
+</mapper>

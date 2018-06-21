@@ -1,0 +1,259 @@
+2018-06-01 15:59:54,524 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.yogo.fm.YogoAdminApplicationTest], using SpringBootContextLoader
+2018-06-01 15:59:54,580 [main] INFO  org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.yogo.fm.YogoAdminApplicationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-06-01 15:59:54,589 [main] INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.yogo.fm.YogoAdminApplicationTest]: YogoAdminApplicationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-06-01 15:59:56,736 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.yogo.fm.YogoAdminApplication for test class com.yogo.fm.YogoAdminApplicationTest
+2018-06-01 15:59:56,834 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-06-01 15:59:57,188 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@20ccf40b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2fb3536e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@169e6180, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@35aea049, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7205765b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@47987356, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@22ef9844, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6283d8b8, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3b6ddd1d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3f6b0be5, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@611889f4, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1da2cb77]
+2018-06-01 16:00:01,212 [main] INFO  com.yogo.fm.YogoAdminApplicationTest - Starting YogoAdminApplicationTest on Zcpc1688888 with PID 10892 (started by Administrator in D:\KCworkspace\workspace\yogo-fm\admin)
+2018-06-01 16:00:01,213 [main] INFO  com.yogo.fm.YogoAdminApplicationTest - The following profiles are active: dev
+2018-06-01 16:00:01,747 [main] INFO  org.springframework.web.context.support.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@e84a8e1: startup date [Fri Jun 01 16:00:01 CST 2018]; root of context hierarchy
+2018-06-01 16:00:03,756 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.6.Final
+2018-06-01 16:00:08,009 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-06-01 16:00:10,304 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3883b9c8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-01 16:00:10,921 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.yogo.fm.common.redis.RedisConfig$$EnhancerBySpringCGLIB$$f3757978] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-01 16:00:10,975 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'keyGenerator' of type [com.yogo.fm.common.redis.RedisConfig$$Lambda$7/802628402] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-01 16:00:10,992 [main] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$8195efe6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-01 16:00:20,223 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/feedback/lookOver],methods=[PUT]}" onto public com.yogo.fm.common.response.FmResponse com.yogo.fm.admin.controller.operation.FeedbackController.enable(com.yogo.fm.model.operation.content.FeedbackEntity) throws com.yogo.fm.common.exception.FmException
+2018-06-01 16:00:20,226 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/feedback/find],methods=[GET]}" onto public com.yogo.fm.common.response.FmResponse<com.yogo.fm.model.operation.content.FeedbackEntity> com.yogo.fm.admin.controller.operation.FeedbackController.find(java.lang.Long) throws com.yogo.fm.common.exception.FmException
+2018-06-01 16:00:20,227 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/feedback/delete],methods=[DELETE]}" onto public com.yogo.fm.common.response.FmResponse com.yogo.fm.admin.controller.operation.FeedbackController.delete(java.lang.String) throws com.yogo.fm.common.exception.FmException
+2018-06-01 16:00:20,229 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/feedback/list],methods=[GET]}" onto public com.yogo.fm.common.response.FmResponse<com.yogo.fm.common.utils.FmPage<com.yogo.fm.model.operation.content.FeedbackEntity>> com.yogo.fm.admin.controller.operation.FeedbackController.findPage(com.yogo.fm.model.operation.content.FeedbackEntity,com.yogo.fm.common.utils.FmPage<com.yogo.fm.model.operation.content.FeedbackEntity>) throws com.yogo.fm.common.exception.FmException
+2018-06-01 16:00:20,235 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/message/update],methods=[PUT]}" onto public com.yogo.fm.common.response.FmResponse<com.yogo.fm.model.operation.content.MessageEntity> com.yogo.fm.admin.controller.operation.MessageController.update(com.yogo.fm.model.operation.content.MessageEntity) throws com.yogo.fm.common.exception.FmException
+2018-06-01 16:00:20,236 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/message/find],methods=[GET]}" onto public com.yogo.fm.common.response.FmResponse<com.yogo.fm.model.operation.content.MessageEntity> com.yogo.fm.admin.controller.operation.MessageController.find(java.lang.Long) throws com.yogo.fm.common.exception.FmException
+2018-06-01 16:00:20,239 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/message/delete],methods=[DELETE]}" onto public com.yogo.fm.common.response.FmResponse<com.yogo.fm.model.system.ResourceEntity> com.yogo.fm.admin.controller.operation.MessageController.delete(java.lang.String) throws com.yogo.fm.common.exception.FmException
+2018-06-01 16:00:20,242 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/message/list],methods=[GET]}" onto public com.yogo.fm.common.response.FmResponse<com.yogo.fm.common.utils.FmPage<com.yogo.fm.model.operation.content.MessageEntity>> com.yogo.fm.admin.controller.operation.MessageController.list(com.yogo.fm.model.operation.content.MessageEntity,com.yogo.fm.common.utils.FmPage<com.yogo.fm.model.operation.content.MessageEntity>) throws com.yogo.fm.common.exception.FmException
+2018-06-01 16:00:20,247 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/order/list],methods=[GET]}" onto public com.yogo.fm.common.response.FmResponse<com.yogo.fm.common.utils.FmPage<com.yogo.fm.model.operation.content.OrderEntity>> com.yogo.fm.admin.controller.operation.OrdersController.getOrderByUserAccount(com.yogo.fm.model.operation.content.OrderEntity,com.yogo.fm.common.utils.FmPage<com.yogo.fm.model.operation.content.OrderEntity>) throws com.yogo.fm.common.exception.FmException
+2018-06-01 16:00:20,251 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/id],methods=[GET]}" onto public com.yogo.fm.common.response.FmResponse<com.yogo.fm.model.operation.content.UserEntity> com.yogo.fm.admin.controller.operation.UserController.find(java.lang.Long)
+2018-06-01 16:00:20,253 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/list],methods=[GET]}" onto public com.yogo.fm.common.response.FmResponse<com.yogo.fm.common.utils.FmPage<com.yogo.fm.model.operation.content.UserEntity>> com.yogo.fm.admin.controller.operation.UserController.getUsers(com.yogo.fm.model.operation.content.UserEntity,com.yogo.fm.common.utils.FmPage<com.yogo.fm.model.operation.content.UserEntity>) throws com.yogo.fm.common.exception.FmException
+2018-06-01 16:00:20,256 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/id],methods=[DELETE]}" onto public com.yogo.fm.common.response.FmResponse com.yogo.fm.admin.controller.operation.UserController.deleteUser(java.lang.Long)
+2018-06-01 16:00:20,257 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/user/status],methods=[PUT]}" onto public com.yogo.fm.common.response.FmResponse com.yogo.fm.admin.controller.operation.UserController.changeUserStatus(com.yogo.fm.model.operation.content.UserEntity)
+2018-06-01 16:00:20,269 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/account/enable],methods=[PUT]}" onto public com.yogo.fm.common.response.FmResponse com.yogo.fm.admin.controller.system.AccountController.enable(com.yogo.fm.model.system.AccountEntity) throws com.yogo.fm.common.exception.FmException
+2018-06-01 16:00:20,270 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/account/add],methods=[POST]}" onto public com.yogo.fm.common.response.FmResponse<com.yogo.fm.model.system.AccountEntity> com.yogo.fm.admin.controller.system.AccountController.add(com.yogo.fm.model.system.AccountEntity) throws com.yogo.fm.common.exception.FmException
+2018-06-01 16:00:20,271 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/account/update],methods=[PUT]}" onto public com.yogo.fm.common.response.FmResponse<com.yogo.fm.model.system.AccountEntity> com.yogo.fm.admin.controller.system.AccountController.update(com.yogo.fm.model.system.AccountEntity) throws com.yogo.fm.common.exception.FmException
+2018-06-01 16:00:20,273 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/account/find],methods=[GET]}" onto public com.yogo.fm.common.response.FmResponse<com.yogo.fm.model.system.AccountEntity> com.yogo.fm.admin.controller.system.AccountController.find(java.lang.Long) throws com.yogo.fm.common.exception.FmException
+2018-06-01 16:00:20,274 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/account/delete],methods=[DELETE]}" onto public com.yogo.fm.common.response.FmResponse<com.yogo.fm.model.system.ResourceEntity> com.yogo.fm.admin.controller.system.AccountController.delete(java.lang.String) throws com.yogo.fm.common.exception.FmException
+2018-06-01 16:00:20,275 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/account/list],methods=[GET]}" onto public com.yogo.fm.common.response.FmResponse<com.yogo.fm.common.utils.FmPage<com.yogo.fm.model.system.AccountEntity>> com.yogo.fm.admin.controller.system.AccountController.findPage(com.yogo.fm.model.system.AccountEntity,com.yogo.fm.common.utils.FmPage<com.yogo.fm.model.system.AccountEntity>) throws com.yogo.fm.common.exception.FmException
+2018-06-01 16:00:20,278 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/account/current],methods=[GET]}" onto public com.yogo.fm.common.response.FmResponse<com.yogo.fm.model.system.AccountEntity> com.yogo.fm.admin.controller.system.AccountController.currentAccount() throws com.yogo.fm.common.exception.FmException
+2018-06-01 16:00:20,281 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/common/logout],methods=[GET]}" onto public com.yogo.fm.common.response.FmResponse<com.yogo.fm.model.system.AccountEntity> com.yogo.fm.admin.controller.system.CommonController.logout()
+2018-06-01 16:00:20,283 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/common/login],methods=[POST]}" onto public com.yogo.fm.common.response.FmResponse<java.lang.String> com.yogo.fm.admin.controller.system.CommonController.login(java.lang.String,java.lang.String) throws com.yogo.fm.common.exception.FmException
+2018-06-01 16:00:20,295 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/resource/add],methods=[POST]}" onto public com.yogo.fm.common.response.FmResponse<com.yogo.fm.model.system.ResourceEntity> com.yogo.fm.admin.controller.system.ResourceController.add(com.yogo.fm.model.system.ResourceEntity) throws com.yogo.fm.common.exception.FmException
+2018-06-01 16:00:20,303 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/resource/update],methods=[PUT]}" onto public com.yogo.fm.common.response.FmResponse<com.yogo.fm.model.system.ResourceEntity> com.yogo.fm.admin.controller.system.ResourceController.update(com.yogo.fm.model.system.ResourceEntity) throws com.yogo.fm.common.exception.FmException
+2018-06-01 16:00:20,304 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/resource/delete],methods=[DELETE]}" onto public com.yogo.fm.common.response.FmResponse<com.yogo.fm.model.system.ResourceEntity> com.yogo.fm.admin.controller.system.ResourceController.delete(java.lang.String) throws com.yogo.fm.common.exception.FmException
+2018-06-01 16:00:20,305 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/resource/list],methods=[GET]}" onto public com.yogo.fm.common.response.FmResponse<com.yogo.fm.common.utils.FmPage<com.yogo.fm.model.system.ResourceEntity>> com.yogo.fm.admin.controller.system.ResourceController.findPage(com.yogo.fm.model.system.ResourceEntity,com.yogo.fm.common.utils.FmPage<com.yogo.fm.model.system.ResourceEntity>) throws com.yogo.fm.common.exception.FmException
+2018-06-01 16:00:20,306 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/resource/resourceWithButton],methods=[GET]}" onto public com.yogo.fm.common.response.FmResponse<java.util.List<com.yogo.fm.model.system.ResourceEntity>> com.yogo.fm.admin.controller.system.ResourceController.findPageResource(java.lang.Long) throws com.yogo.fm.common.exception.FmException
+2018-06-01 16:00:20,306 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/resource/getAll],methods=[GET]}" onto public com.yogo.fm.common.response.FmResponse<java.util.List<com.yogo.fm.model.system.ResourceEntity>> com.yogo.fm.admin.controller.system.ResourceController.getAll() throws com.yogo.fm.common.exception.FmException
+2018-06-01 16:00:20,308 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/resource/button],methods=[GET]}" onto public com.yogo.fm.common.response.FmResponse<java.util.List<com.yogo.fm.model.system.ResourceEntity>> com.yogo.fm.admin.controller.system.ResourceController.getButton(java.lang.Long)
+2018-06-01 16:00:20,313 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/role/add],methods=[POST]}" onto public com.yogo.fm.common.response.FmResponse<com.yogo.fm.model.system.AccountEntity> com.yogo.fm.admin.controller.system.RoleController.add(com.yogo.fm.model.system.RoleEntity,java.lang.String) throws com.yogo.fm.common.exception.FmException
+2018-06-01 16:00:20,313 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/role/update],methods=[PUT]}" onto public com.yogo.fm.common.response.FmResponse<com.yogo.fm.model.system.RoleEntity> com.yogo.fm.admin.controller.system.RoleController.update(com.yogo.fm.model.system.RoleEntity,java.lang.String) throws com.yogo.fm.common.exception.FmException
+2018-06-01 16:00:20,314 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/role/delete],methods=[DELETE]}" onto public com.yogo.fm.common.response.FmResponse<com.yogo.fm.model.system.RoleEntity> com.yogo.fm.admin.controller.system.RoleController.delete(java.lang.String) throws com.yogo.fm.common.exception.FmException
+2018-06-01 16:00:20,316 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/role/list],methods=[GET]}" onto public com.yogo.fm.common.response.FmResponse<com.yogo.fm.common.utils.FmPage<com.yogo.fm.model.system.RoleEntity>> com.yogo.fm.admin.controller.system.RoleController.findPage(com.yogo.fm.model.system.RoleEntity,com.yogo.fm.common.utils.FmPage<com.yogo.fm.model.system.RoleEntity>) throws com.yogo.fm.common.exception.FmException
+2018-06-01 16:00:20,317 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/systemConfig/reloadRedis],methods=[GET]}" onto public com.yogo.fm.common.response.FmResponse com.yogo.fm.admin.controller.system.SystemConfigController.reloadRedis()
+2018-06-01 16:00:20,321 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2018-06-01 16:00:20,331 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-06-01 16:00:20,331 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-06-01 16:00:20,333 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-06-01 16:00:20,343 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-01 16:00:20,344 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-01 16:00:23,726 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@e84a8e1: startup date [Fri Jun 01 16:00:01 CST 2018]; root of context hierarchy
+2018-06-01 16:00:24,059 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-01 16:00:24,060 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-01 16:00:24,210 [main] INFO  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in fmExceptionHandle
+2018-06-01 16:00:24,333 [main] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-01 16:00:26,482 [main] INFO  org.springframework.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2018-06-01 16:00:26,483 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2018-06-01 16:00:26,611 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 2 custom documentation plugin(s)
+2018-06-01 16:00:26,660 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2018-06-01 16:00:27,883 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingDELETE_1
+2018-06-01 16:00:27,956 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - Generating unique operation named: findUsingGET_1
+2018-06-01 16:00:28,319 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - Generating unique operation named: findUsingGET_2
+2018-06-01 16:00:28,441 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2018-06-01 16:00:28,554 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingDELETE_2
+2018-06-01 16:00:28,589 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - Generating unique operation named: enableUsingPUT_1
+2018-06-01 16:00:28,605 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - Generating unique operation named: findUsingGET_3
+2018-06-01 16:00:28,638 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - Generating unique operation named: findPageUsingGET_1
+2018-06-01 16:00:28,652 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_1
+2018-06-01 16:00:28,714 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_1
+2018-06-01 16:00:28,728 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingDELETE_3
+2018-06-01 16:00:28,752 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - Generating unique operation named: findPageUsingGET_2
+2018-06-01 16:00:28,866 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_2
+2018-06-01 16:00:28,895 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_2
+2018-06-01 16:00:28,922 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingDELETE_4
+2018-06-01 16:00:28,956 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - Generating unique operation named: findPageUsingGET_3
+2018-06-01 16:00:28,982 [main] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - Generating unique operation named: updateUsingPUT_3
+2018-06-01 16:00:29,401 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2018-06-01 16:00:31,602 [main] INFO  org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-06-01 16:00:31,616 [main] ERROR org.springframework.boot.SpringApplication - Application startup failed
+java.lang.IllegalStateException: Failed to execute ApplicationRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:726)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:713)
+	at org.springframework.boot.SpringApplication.afterRefresh(SpringApplication.java:703)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:304)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:121)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.springframework.data.redis.RedisConnectionFailureException: Cannot get Jedis connection; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+	at org.springframework.data.redis.connection.jedis.JedisConnectionFactory.fetchJedisConnector(JedisConnectionFactory.java:204)
+	at org.springframework.data.redis.connection.jedis.JedisConnectionFactory.getConnection(JedisConnectionFactory.java:348)
+	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:129)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:92)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:79)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:194)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:169)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:157)
+	at org.springframework.data.redis.cache.RedisCache.put(RedisCache.java:233)
+	at org.springframework.data.redis.cache.RedisCache.put(RedisCache.java:201)
+	at org.springframework.cache.interceptor.AbstractCacheInvoker.doPut(AbstractCacheInvoker.java:85)
+	at org.springframework.cache.interceptor.CacheAspectSupport$CachePutRequest.apply(CacheAspectSupport.java:781)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:414)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:324)
+	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:61)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy104.reloadResourceTreeByRoleId(Unknown Source)
+	at com.yogo.fm.admin.task.RedisInitTask.lambda$run$0(RedisInitTask.java:35)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at com.yogo.fm.admin.task.RedisInitTask.run(RedisInitTask.java:33)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:723)
+	... 30 more
+Caused by: redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+	at redis.clients.util.Pool.getResource(Pool.java:53)
+	at redis.clients.jedis.JedisPool.getResource(JedisPool.java:226)
+	at redis.clients.jedis.JedisPool.getResource(JedisPool.java:16)
+	at org.springframework.data.redis.connection.jedis.JedisConnectionFactory.fetchJedisConnector(JedisConnectionFactory.java:194)
+	... 51 more
+Caused by: redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused: connect
+	at redis.clients.jedis.Connection.connect(Connection.java:207)
+	at redis.clients.jedis.BinaryClient.connect(BinaryClient.java:93)
+	at redis.clients.jedis.BinaryJedis.connect(BinaryJedis.java:1767)
+	at redis.clients.jedis.JedisFactory.makeObject(JedisFactory.java:106)
+	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:888)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:432)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:361)
+	at redis.clients.util.Pool.getResource(Pool.java:49)
+	... 54 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at redis.clients.jedis.Connection.connect(Connection.java:184)
+	... 61 more
+2018-06-01 16:00:31,650 [main] INFO  org.springframework.web.context.support.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@e84a8e1: startup date [Fri Jun 01 16:00:01 CST 2018]; root of context hierarchy
+2018-06-01 16:00:31,656 [main] INFO  org.springframework.context.support.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+2018-06-01 16:00:31,721 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2018-06-01 16:00:31,722 [main] ERROR org.springframework.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@20ccf40b] to prepare test instance [com.yogo.fm.YogoAdminApplicationTest@c79780]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: java.lang.IllegalStateException: Failed to execute ApplicationRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:726)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:713)
+	at org.springframework.boot.SpringApplication.afterRefresh(SpringApplication.java:703)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:304)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:121)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 24 more
+Caused by: org.springframework.data.redis.RedisConnectionFailureException: Cannot get Jedis connection; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+	at org.springframework.data.redis.connection.jedis.JedisConnectionFactory.fetchJedisConnector(JedisConnectionFactory.java:204)
+	at org.springframework.data.redis.connection.jedis.JedisConnectionFactory.getConnection(JedisConnectionFactory.java:348)
+	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:129)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:92)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:79)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:194)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:169)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:157)
+	at org.springframework.data.redis.cache.RedisCache.put(RedisCache.java:233)
+	at org.springframework.data.redis.cache.RedisCache.put(RedisCache.java:201)
+	at org.springframework.cache.interceptor.AbstractCacheInvoker.doPut(AbstractCacheInvoker.java:85)
+	at org.springframework.cache.interceptor.CacheAspectSupport$CachePutRequest.apply(CacheAspectSupport.java:781)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:414)
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:324)
+	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:61)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy104.reloadResourceTreeByRoleId(Unknown Source)
+	at com.yogo.fm.admin.task.RedisInitTask.lambda$run$0(RedisInitTask.java:35)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at com.yogo.fm.admin.task.RedisInitTask.run(RedisInitTask.java:33)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:723)
+	... 30 more
+Caused by: redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+	at redis.clients.util.Pool.getResource(Pool.java:53)
+	at redis.clients.jedis.JedisPool.getResource(JedisPool.java:226)
+	at redis.clients.jedis.JedisPool.getResource(JedisPool.java:16)
+	at org.springframework.data.redis.connection.jedis.JedisConnectionFactory.fetchJedisConnector(JedisConnectionFactory.java:194)
+	... 51 more
+Caused by: redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused: connect
+	at redis.clients.jedis.Connection.connect(Connection.java:207)
+	at redis.clients.jedis.BinaryClient.connect(BinaryClient.java:93)
+	at redis.clients.jedis.BinaryJedis.connect(BinaryJedis.java:1767)
+	at redis.clients.jedis.JedisFactory.makeObject(JedisFactory.java:106)
+	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:888)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:432)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:361)
+	at redis.clients.util.Pool.getResource(Pool.java:49)
+	... 54 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at redis.clients.jedis.Connection.connect(Connection.java:184)
+	... 61 more

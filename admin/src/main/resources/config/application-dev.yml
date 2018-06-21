@@ -1,0 +1,70 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://61.153.190.155:3306/yogo?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
+#    url: jdbc:mysql://192.168.1.84:3306/yogo?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: Kangce@0607
+#    password: root
+
+  # REDIS (RedisProperties)
+  redis:
+      # Redis数据库索引（默认为0）
+      database: 0
+      # Redis服务器地址
+      host: localhost
+      # Redis服务器连接端
+      port: 6379
+      # Redis服务器连接密码
+#      password: root
+#      password: yogolzd
+      pool:
+        # 连接池最大连接数（使用负值表示没有限制）
+        max-active: 8
+        # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: -1
+        # 连接池中的最小空闲连接
+        min-idle: 0
+        # 连接池中的最大空闲连接
+        max-idle: 8
+      # 连接超时时间（毫秒）
+      timeout: 0
+  #rabbitmq配置
+  rabbitmq:
+    username: pig
+    password: lengleng
+    host: 118.25.48.56
+    port: 5672
+    publisher-confirms: true
+  data:
+    solr:
+      host: http://118.25.48.56:8080/solr
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+oss:
+  host: 192.168.1.131
+  port: 8087
+  upload-path: D:\KC\file
+  download-path: /file
+#  host: 192.168.1.105
+#  port: 8001
+#  upload-path: /opt/exportfile
+#  download-path: /export
+
+umeng:
+  appKey: 5b052594b27b0a412800006f
+  masterSecret: md2f6co9kmi94wt2szo3xvggt0xhkpky
+#  httpsUrl: https://msgapi.umeng.com/upload
+  httpsUrl: http://msg.umeng.com/api/send
+
+
+
+
+
